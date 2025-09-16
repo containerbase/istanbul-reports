@@ -35,6 +35,9 @@ jobs:
       - name: ⚙️ Setup
         uses: containerbase/internal-tools/setup@df03af281c3457391eeac44f4f994211cd17fb8b # v3.10.89
 
+      - name: build
+        run: pnpm build
+
       - name: lint
         run: |
           pnpm eslint -f gha
