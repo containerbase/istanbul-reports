@@ -77,7 +77,7 @@ export default tseslint.config(
             'vite.config.ts',
             '__mocks__/**',
             '**/*.spec.ts',
-            'src/vendor/**'
+            'src/vendor/**',
           ],
         },
       ],
