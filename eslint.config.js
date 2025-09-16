@@ -54,7 +54,7 @@ export default tseslint.config(
 
     settings: {
       'import-x/resolver-next': [
-        createTypeScriptImportResolver({ project: 'tsconfig.lint.json' }),
+        createTypeScriptImportResolver({ project: 'tsconfig.json' }),
       ],
     },
   },
@@ -77,6 +77,7 @@ export default tseslint.config(
             'vite.config.ts',
             '__mocks__/**',
             '**/*.spec.ts',
+            'src/vendor/**'
           ],
         },
       ],
