@@ -1,0 +1,11 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["local>containerbase/.github:renovate-config"],
+  "packageRules": [
+    {
+      "description": "use fix for highlight.js",
+      "matchDepNames": ["highlight.js"],
+      "semanticCommitType": "fix"
+    }
+  ]
+}

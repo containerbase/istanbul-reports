@@ -1,0 +1,73 @@
+{
+  "name": "@containerbase/instanbul-reports-html",
+  "version": "0.0.0-semantic-realease",
+  "keywords": [
+    "istanbul",
+    "reports",
+    "jest",
+    "vitest"
+  ],
+  "repository": "https://github.com/containerbase/instanbul-reports.git",
+  "license": "MIT",
+  "author": "Michael Kriese <michael.kriese@visualon.de>",
+  "type": "module",
+  "main": "index.cjs",
+  "files": [
+    "dist/",
+    "vendor/",
+    "index.cjs"
+  ],
+  "scripts": {
+    "eslint": "eslint --cache .",
+    "eslint-fix": "eslint --cache --fix .",
+    "prepare": "husky",
+    "build": "run-s 'build:*'",
+    "build:hljs": "esbuild src/vendor/hljs.ts --bundle --target=es2020 --outfile=vendor/hljs.js --banner:js='/* eslint-disable */ // @ts-nocheck'",
+    "build:main": "esbuild src/index.ts --platform=node --target=node20 --format=esm --outfile=dist/index.js --banner:js='/* eslint-disable */ // @ts-nocheck'",
+    "lint:types": "run-p 'lint:types:*'",
+    "lint:types:default": "tsc",
+    "prettier": "prettier --cache -c -u \"**/*.*\"",
+    "prettier-fix": "prettier --cache -w -u \"**/*.*\""
+  },
+  "dependencies": {
+    "istanbul-lib-report": "^3.0.1",
+    "istanbul-reports": "^3.2.0"
+  },
+  "devDependencies": {
+    "@containerbase/eslint-plugin": "1.1.6",
+    "@eslint/js": "9.35.0",
+    "@tsconfig/node20": "20.1.6",
+    "@tsconfig/strictest": "2.0.5",
+    "@types/eslint-config-prettier": "6.11.3",
+    "@types/istanbul-lib-report": "3.0.3",
+    "@types/node": "22.18.3",
+    "@vitest/eslint-plugin": "1.3.9",
+    "conventional-changelog-conventionalcommits": "9.1.0",
+    "esbuild": "0.25.9",
+    "eslint": "9.35.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-formatter-gha": "1.6.0",
+    "eslint-import-resolver-typescript": "4.4.4",
+    "eslint-plugin-import-x": "4.16.1",
+    "eslint-plugin-promise": "7.2.1",
+    "globals": "16.4.0",
+    "highlight.js": "11.11.1",
+    "husky": "9.1.7",
+    "lint-staged": "16.1.6",
+    "markdownlint-cli2": "0.18.1",
+    "npm-run-all2": "8.0.4",
+    "prettier": "3.6.2",
+    "prettier-plugin-packagejson": "2.5.19",
+    "semantic-release": "24.2.8",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.43.0"
+  },
+  "packageManager": "pnpm@10.16.0",
+  "engines": {
+    "node": "^20.9.0 || ^22.11.0",
+    "pnpm": "^10.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

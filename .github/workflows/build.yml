@@ -1,0 +1,75 @@
+name: build
+
+on:
+  push:
+    branches-ignore:
+      - gh-readonly-queue/**
+  merge_group:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number ||  github.ref_name }}
+  cancel-in-progress: ${{ github.ref_name != 'main' && !startsWith(github.ref_name, 'maint/') && github.event_name == 'push' }}
+
+permissions:
+  contents: read
+
+env:
+  DRY_RUN: ${{ github.ref_name != github.event.repository.default_branch && !startsWith(github.ref_name, 'maint/') }}
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⚙️ Setup
+        uses: containerbase/internal-tools/setup@df03af281c3457391eeac44f4f994211cd17fb8b # v3.10.89
+        with:
+          save-cache: true
+
+  lint:
+    needs:
+      - setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: ⚙️ Setup
+        uses: containerbase/internal-tools/setup@df03af281c3457391eeac44f4f994211cd17fb8b # v3.10.89
+
+      - name: lint
+        run: |
+          pnpm eslint -f gha
+          pnpm prettier
+          pnpm lint:types
+
+  release:
+    needs:
+      - lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    permissions:
+      contents: write
+      packages: write
+      id-token: write
+
+    steps:
+      # full checkout for semantic-release
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          fetch-depth: 0
+          show-progress: false
+          filter: blob:none # we don't need all blobs
+
+      - uses: sigstore/cosign-installer@d7543c93d881b35a8faa02e8e3605f69b7a1ce62 # v3.10.0
+
+      - name: ⚙️ Setup
+        uses: containerbase/internal-tools/setup@df03af281c3457391eeac44f4f994211cd17fb8b # v3.10.89
+        with:
+          checkout: false
+
+      - name: semantic-release
+        if: github.event_name == 'push'
+        run: pnpm semantic-release --dry-run ${{env.DRY_RUN}} --ci ${{env.DRY_RUN != 'true'}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

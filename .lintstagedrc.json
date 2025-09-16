@@ -1,0 +1,5 @@
+{
+  "*.md": ["markdownlint-cli2 --fix", "prettier --write"],
+  "*.{js,ts,cjs,mjs}": ["eslint --fix", "prettier --write"],
+  "!*.{cjs,js,mjs,md,ts}": "prettier --ignore-unknown --write"
+}
