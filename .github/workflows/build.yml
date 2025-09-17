@@ -70,6 +70,9 @@ jobs:
         with:
           checkout: false
 
+      - name: build
+        run: pnpm build
+
       - name: semantic-release
         if: github.event_name == 'push'
         run: pnpm semantic-release --dry-run ${{env.DRY_RUN}} --ci ${{env.DRY_RUN != 'true'}}
