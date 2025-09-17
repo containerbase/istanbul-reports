@@ -1,5 +1,5 @@
 {
-  "name": "@containerbase/instanbul-reports-html",
+  "name": "@containerbase/istanbul-reports-html",
   "version": "0.0.0-semantic-realease",
   "keywords": [
     "coverage",
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/containerbase/instanbul-reports.git"
+    "url": "git+https://github.com/containerbase/istanbul-reports.git"
   },
   "license": "MIT",
   "author": "Michael Kriese <michael.kriese@visualon.de>",
