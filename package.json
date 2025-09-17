@@ -7,7 +7,10 @@
     "jest",
     "vitest"
   ],
-  "repository": "https://github.com/containerbase/instanbul-reports.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/containerbase/instanbul-reports.git"
+  },
   "license": "MIT",
   "author": "Michael Kriese <michael.kriese@visualon.de>",
   "type": "module",
