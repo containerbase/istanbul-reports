@@ -9,8 +9,27 @@
         "successCommentCondition": false
       }
     ],
-    "@semantic-release/npm"
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "pnpm version ${nextRelease.version} --git-tag-version=false",
+        "publishCmd": "pnpm publish"
+      }
+    ]
   ],
+  "analyzeCommits": {
+    "releaseRules": [
+      {
+        "type": "docs",
+        "scope": "readme.md",
+        "release": "patch"
+      },
+      {
+        "type": "build",
+        "release": "patch"
+      }
+    ]
+  },
   "preset": "conventionalcommits",
   "presetConfig": {
     "types": [
