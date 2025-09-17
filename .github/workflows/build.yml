@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⚙️ Setup
-        uses: containerbase/internal-tools/setup@df03af281c3457391eeac44f4f994211cd17fb8b # v3.10.89
+        uses: containerbase/internal-tools/setup@b75a136262f1fc4188eded7d8b5f7b90d7a16483 # v3.11.0
         with:
           save-cache: true
 
@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: ⚙️ Setup
-        uses: containerbase/internal-tools/setup@df03af281c3457391eeac44f4f994211cd17fb8b # v3.10.89
+        uses: containerbase/internal-tools/setup@b75a136262f1fc4188eded7d8b5f7b90d7a16483 # v3.11.0
 
       - name: build
         run: pnpm build
@@ -66,7 +66,7 @@ jobs:
       - uses: sigstore/cosign-installer@d7543c93d881b35a8faa02e8e3605f69b7a1ce62 # v3.10.0
 
       - name: ⚙️ Setup
-        uses: containerbase/internal-tools/setup@df03af281c3457391eeac44f4f994211cd17fb8b # v3.10.89
+        uses: containerbase/internal-tools/setup@b75a136262f1fc4188eded7d8b5f7b90d7a16483 # v3.11.0
         with:
           checkout: false
 
