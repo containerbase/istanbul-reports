@@ -2,9 +2,13 @@
   "name": "@containerbase/instanbul-reports-html",
   "version": "0.0.0-semantic-realease",
   "keywords": [
+    "coverage",
+    "highlight",
+    "highlight.js",
     "istanbul",
-    "reports",
     "jest",
+    "reports",
+    "syntax",
     "vitest"
   ],
   "repository": {
