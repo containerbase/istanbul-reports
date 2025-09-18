@@ -2,18 +2,12 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
+    "@containerbase/semantic-release-pnpm",
     [
       "@semantic-release/github",
       {
         "releasedLabels": false,
         "successCommentCondition": false
-      }
-    ],
-    [
-      "@semantic-release/exec",
-      {
-        "prepareCmd": "pnpm version ${nextRelease.version} --git-tag-version=false",
-        "publishCmd": "pnpm publish --no-git-checks"
       }
     ]
   ],
