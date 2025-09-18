@@ -1,6 +1,6 @@
 {
   "name": "@containerbase/istanbul-reports-html",
-  "version": "0.0.0-semantic-realease",
+  "version": "0.0.0-semantic-release",
   "keywords": [
     "coverage",
     "highlight",
