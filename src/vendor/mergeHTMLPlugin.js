@@ -136,10 +136,10 @@ var mergeHTMLPlugin = (function () {
       function attributeString(attr) {
         return ' ' + attr.nodeName + '="' + escapeHTML(attr.value) + '"';
       }
-      // @ts-expect-error -- Node doesn't have attributes?
       result +=
         '<' +
         tag(node) +
+        // @ts-expect-error -- Node doesn't have attributes?
         [].map.call(node.attributes, attributeString).join('') +
         '>';
     }
