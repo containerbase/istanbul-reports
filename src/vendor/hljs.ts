@@ -2,8 +2,12 @@
 import hljs from 'highlight.js/lib/core';
 import ts from 'highlight.js/lib/languages/typescript';
 import 'highlight.js/styles/googlecode.css';
+import mergeHTMLPlugin from './mergeHTMLPlugin.js';
 
-hljs.configure({ cssSelector: 'pre.prettyprint' });
+// https://github.com/highlightjs/highlight.js/issues/2889
+hljs.addPlugin(mergeHTMLPlugin);
+hljs.configure({ cssSelector: 'pre.prettyprint', ignoreUnescapedHTML: true });
+
 // Then register the languages you need
 hljs.registerLanguage('typescript', ts);
 Object.assign(window, {

@@ -253,4 +253,12 @@ export default tseslint.config(
       'import-x/extensions': 0,
     },
   },
+  {
+    files: ['src/vendor/**'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+      },
+    },
+  },
 );
