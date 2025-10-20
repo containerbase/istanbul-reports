@@ -43,7 +43,7 @@
   "devDependencies": {
     "@containerbase/eslint-plugin": "1.1.15",
     "@containerbase/semantic-release-pnpm": "1.2.8",
-    "@eslint/js": "9.37.0",
+    "@eslint/js": "9.38.0",
     "@tsconfig/node20": "20.1.6",
     "@tsconfig/strictest": "2.0.6",
     "@types/eslint-config-prettier": "6.11.3",
@@ -52,7 +52,7 @@
     "@vitest/eslint-plugin": "1.3.23",
     "conventional-changelog-conventionalcommits": "9.1.0",
     "esbuild": "0.25.11",
-    "eslint": "9.37.0",
+    "eslint": "9.38.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-formatter-gha": "1.6.0",
     "eslint-import-resolver-typescript": "4.4.4",
