@@ -1,7 +1,9 @@
 /* global window */
+import 'highlight.js/styles/googlecode.css';
+import './hljs.css';
+
 import hljs from 'highlight.js/lib/core';
 import ts from 'highlight.js/lib/languages/typescript';
-import 'highlight.js/styles/googlecode.css';
 import mergeHTMLPlugin from './mergeHTMLPlugin.js';
 
 // https://github.com/highlightjs/highlight.js/issues/2889
