@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: ⚙️ Setup
-        uses: containerbase/internal-tools/setup@7afa17dc1480d504d962635e85ca62b674f9264f # v4.1.9
+        uses: containerbase/internal-tools/setup@3f19c42c90ee5c0fcde2f899f703a3a546afbeef # v4.1.13
         with:
           save-cache: true
 
@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: ⚙️ Setup
-        uses: containerbase/internal-tools/setup@7afa17dc1480d504d962635e85ca62b674f9264f # v4.1.9
+        uses: containerbase/internal-tools/setup@3f19c42c90ee5c0fcde2f899f703a3a546afbeef # v4.1.13
 
       - name: build
         run: pnpm build
@@ -64,7 +64,7 @@ jobs:
           filter: blob:none # we don't need all blobs
 
       - name: ⚙️ Setup
-        uses: containerbase/internal-tools/setup@7afa17dc1480d504d962635e85ca62b674f9264f # v4.1.9
+        uses: containerbase/internal-tools/setup@3f19c42c90ee5c0fcde2f899f703a3a546afbeef # v4.1.13
         with:
           checkout: false
 
