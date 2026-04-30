@@ -11,8 +11,8 @@
     "noImplicitOverride": true,
     "isolatedModules": true,
     "noPropertyAccessFromIndexSignature": false,
-    "module": "ES2022",
-    "moduleResolution": "Bundler",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "paths": {
       "~test/*": ["./test/*"]
     }
