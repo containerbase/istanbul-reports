@@ -4,7 +4,6 @@
     "@tsconfig/node20/tsconfig.json"
   ],
   "compilerOptions": {
-    "baseUrl": ".",
     "allowJs": true,
     "noEmit": true,
     "types": ["node"],
@@ -18,5 +17,5 @@
       "~test/*": ["./test/*"]
     }
   },
-  "exclude": ["node_modules", "bin", "coverage", "html"]
+  "exclude": ["node_modules", "bin", "coverage", "html", "dist", "vendor"]
 }

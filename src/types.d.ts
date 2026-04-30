@@ -18,3 +18,5 @@ declare module 'istanbul-reports/lib/html/index.js' {
 
   export = HtmlReport;
 }
+
+declare module '*.css' {}

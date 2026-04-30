@@ -71,10 +71,10 @@ export default tseslint.config(
         'error',
         {
           devDependencies: [
-            'eslint.config.js',
+            '*.config.js',
             'test/**',
             'tools/**',
-            'vite.config.ts',
+            '*.config.ts',
             '__mocks__/**',
             '**/*.spec.ts',
             'src/vendor/**',

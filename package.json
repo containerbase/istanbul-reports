@@ -25,14 +25,12 @@
     "index.cjs"
   ],
   "scripts": {
+    "build": "node tools/build.js",
     "eslint": "eslint --cache .",
     "eslint-fix": "eslint --cache --fix .",
-    "prepare": "husky",
-    "build": "run-s 'build:*'",
-    "build:hljs": "esbuild src/vendor/hljs.ts --bundle --target=es2020 --outfile=vendor/hljs.js --banner:js='/* eslint-disable */ // @ts-nocheck'",
-    "build:main": "esbuild src/index.ts --platform=node --target=node20 --format=esm --outfile=dist/index.js --banner:js='/* eslint-disable */ // @ts-nocheck'",
     "lint:types": "run-p 'lint:types:*'",
     "lint:types:default": "tsc",
+    "prepare": "husky",
     "prettier": "prettier --cache -c -u \"**/*.*\"",
     "prettier-fix": "prettier --cache -w -u \"**/*.*\""
   },
@@ -51,7 +49,6 @@
     "@types/node": "22.19.17",
     "@vitest/eslint-plugin": "1.6.16",
     "conventional-changelog-conventionalcommits": "9.3.1",
-    "esbuild": "0.28.0",
     "eslint": "9.39.4",
     "eslint-config-prettier": "10.1.8",
     "eslint-formatter-gha": "1.6.0",
@@ -68,7 +65,8 @@
     "prettier-plugin-packagejson": "2.5.22",
     "semantic-release": "25.0.3",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.59.0"
+    "typescript-eslint": "8.59.0",
+    "vite": "8.0.10"
   },
   "packageManager": "pnpm@10.33.2",
   "engines": {
