@@ -20,6 +20,7 @@ export default tseslint.config(
       'html/',
       '**/node_modules/',
       '.pnpm-store',
+      'vendor/',
     ],
   },
   {
