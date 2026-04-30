@@ -6,6 +6,11 @@
       "description": "use fix for highlight.js",
       "matchDepNames": ["highlight.js"],
       "semanticCommitType": "fix"
+    },
+    {
+      "description": "Use `chore` semantic commit scope for lockfile maintenance.",
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "semanticCommitType": "chore"
     }
   ]
 }
