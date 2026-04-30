@@ -210,6 +210,8 @@ export default tseslint.config(
           avoidQuotes: true,
         },
       ],
+
+      '@containerbase/enforce-ts-extension': 0,
     },
   },
   {
