@@ -1,5 +1,5 @@
 import path from 'node:path';
-import { type Context, type ReportNode } from 'istanbul-lib-report';
+import type { Context, ReportNode } from 'istanbul-lib-report';
 import HtmlReport from 'istanbul-reports/lib/html/index.js';
 
 const __dirname = import.meta.dirname;

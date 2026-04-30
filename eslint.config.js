@@ -78,6 +78,7 @@ export default tseslint.config(
             '__mocks__/**',
             '**/*.spec.ts',
             'src/vendor/**',
+            '**/*.d.ts',
           ],
         },
       ],
