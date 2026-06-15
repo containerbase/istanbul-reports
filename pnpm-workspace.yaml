@@ -1,6 +1,9 @@
 # no packages yet
 packages: []
 
+# renovate is handling this
+updateNotifier: false
+
 # need to publish workspace root with correct version
 includeWorkspaceRoot: true
 
@@ -9,3 +12,11 @@ strictPeerDependencies: true
 allowBuilds:
   esbuild: false
   unrs-resolver: false
+
+# in line with https://github.com/containerbase/.github/blob/main/default.json,
+# all non-Renovate or non-Containerbase packages should only be installed after
+# 3 days
+minimumReleaseAge: 4320
+minimumReleaseAgeExclude:
+  - '@renovatebot/*'
+  - '@containerbase/*'
