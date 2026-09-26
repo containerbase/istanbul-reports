@@ -18,7 +18,7 @@ env:
 
 jobs:
   setup:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: ⚙️ Setup
         uses: containerbase/internal-tools/setup@2d111dadb6f3a7ddd0d8024012e8c48b4baae62e # v5.0.45
@@ -28,7 +28,7 @@ jobs:
   lint:
     needs:
       - setup
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 15
 
     steps:
@@ -47,7 +47,7 @@ jobs:
   release:
     needs:
       - lint
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 15
 
     permissions:
