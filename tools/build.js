@@ -11,7 +11,7 @@ await build({
     rolldownOptions: {
       external: /^(?![./]\/)/,
       output: {
-        postBanner: '/* eslint-disable */ // @ts-nocheck',
+        postBanner: '// @ts-nocheck',
         dir: 'dist',
         cleanDir: true,
         entryFileNames: 'index.js',
@@ -32,7 +32,7 @@ await build({
     },
     rolldownOptions: {
       output: {
-        postBanner: '/* eslint-disable */ // @ts-nocheck',
+        postBanner: '// @ts-nocheck',
         dir: 'vendor',
         cleanDir: true,
         entryFileNames: 'hljs.js',

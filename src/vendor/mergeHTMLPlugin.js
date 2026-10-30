@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 var mergeHTMLPlugin = (function () {
   'use strict';
 
@@ -105,9 +104,7 @@ var mergeHTMLPlugin = (function () {
         return original.length ? original : highlighted;
       }
       if (original[0].offset !== highlighted[0].offset) {
-        return original[0].offset < highlighted[0].offset
-          ? original
-          : highlighted;
+        return original[0].offset < highlighted[0].offset ? original : highlighted;
       }
 
       /*
@@ -173,11 +170,7 @@ var mergeHTMLPlugin = (function () {
         do {
           render(stream.splice(0, 1)[0]);
           stream = selectStream();
-        } while (
-          stream === original &&
-          stream.length &&
-          stream[0].offset === processed
-        );
+        } while (stream === original && stream.length && stream[0].offset === processed);
         nodeStack.reverse().forEach(open);
       } else {
         if (stream[0].event === 'start') {
