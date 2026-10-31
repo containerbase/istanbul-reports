@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@containerbase/oxlint-plugin": "1.0.4",
-    "@containerbase/semantic-release-pnpm": "1.4.3",
+    "@containerbase/semantic-release-pnpm": "1.4.4",
     "@tsconfig/node22": "22.0.6",
     "@tsconfig/strictest": "2.0.8",
     "@types/istanbul-lib-report": "3.0.3",
