@@ -1,4 +1,5 @@
 import path from 'node:path';
+
 import type { Context, ReportNode } from 'istanbul-lib-report';
 import HtmlReport from 'istanbul-reports/lib/html/index.js';
 
