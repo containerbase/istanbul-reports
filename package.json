@@ -58,7 +58,7 @@
     "oxlint-tsgolint": "7.0.2005",
     "semantic-release": "25.0.9",
     "typescript": "6.0.3",
-    "vite": "8.3.5"
+    "vite": "8.3.6"
   },
   "engines": {
     "node": "^22.11.0 || >=24.0.0",
